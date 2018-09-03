@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaCursos.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SistemaCursos.Model
 {
-    class Curso
+    class Curso: IImpressao
     {
         private string nome { get; set; }
         private List<Periodo> periodos { get; set; }
@@ -26,6 +27,11 @@ namespace SistemaCursos.Model
         {
             this.periodos.Add(periodo);
             return true;
+        }
+
+        public void Imprimir()
+        {
+            throw new NotImplementedException();
         }
     }
 }

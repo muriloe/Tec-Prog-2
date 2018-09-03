@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaCursos.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SistemaCursos.Model
 {
-    class Periodo
+    class Periodo: IImpressao
     {
         private int numeroIdentificacao { get; set; }
         private List<Disciplina> disciplinas { get; set; }
@@ -26,6 +27,11 @@ namespace SistemaCursos.Model
         {
             this.disciplinas.Add(disciplina);
             return true;
+        }
+
+        public void Imprimir()
+        {
+            throw new NotImplementedException();
         }
     }
 }

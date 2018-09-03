@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaCursos.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SistemaCursos.Model
 {
-    class Disciplina
+    class Disciplina: IImpressao
     {
         
         private int codigo { get; set; }
@@ -42,6 +43,9 @@ namespace SistemaCursos.Model
             return true;
         }
 
-
+        public void Imprimir()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
