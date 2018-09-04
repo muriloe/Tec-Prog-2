@@ -11,8 +11,18 @@ namespace SistemaCursos
     {
         static void Main(string[] args)
         {
-            Teste();
+            //Teste();
+            Leitura();
 
+        }
+
+        static public void Leitura()
+        {
+            string diretorio = @"C:\temp\";
+            string parametro1 = "MatrizCurricularBSI.txt";
+            string parametro2 = "MatrizCurricularBSI.xml";
+            string parametro3 = "BSI";
+            IOFiles.converteTXTparaXML(diretorio + parametro1, diretorio + parametro2, parametro3);
         }
 
         static public void Teste()
@@ -40,8 +50,6 @@ namespace SistemaCursos
             bsi.cadastrarCurso("Bacharelado em Sistamas de Informação");
             bsi.inserirPeriodo(p1);
             bsi.inserirPeriodo(p2);
-
-
         }
     }
 }
