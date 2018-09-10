@@ -1,0 +1,75 @@
+<Curso nome="BSI">
+  <periodo numero="1º" AT="18" AP="8" Créd.="26" HA="520" HR="390">
+    <disciplina Ordem="1" Disciplinas="Programação I" Requisito="-" AT="2" AP="4" Créd.="6" HA="120" HR="90" />
+    <disciplina Ordem="2" Disciplinas="Laboratório de Informática" Requisito="-" AT="0" AP="4" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="3" Disciplinas="Fundamentos de Sistemas de Informação" Requisito="-" AT="4" AP="0" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="4" Disciplinas="Lógica Matemática" Requisito="-" AT="4" AP="0" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="5" Disciplinas="Introdução ao Cálculo" Requisito="-" AT="4" AP="0" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="6" Disciplinas="Leitura e Produção de Textos Acadêmicos" Requisito="-" AT="4" AP="0" Créd.="4" HA="80" HR="60" />
+  </periodo>
+  <periodo numero="2º" AT="16" AP="10" Créd.="26" HA="520" HR="390">
+    <disciplina Ordem="7" Disciplinas="Programação II" Requisito="01PR" AT="2" AP="4" Créd.="6" HA="120" HR="90" />
+    <disciplina Ordem="8" Disciplinas="Oficina de Programação" Requisito="-" AT="0" AP="4" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="9" Disciplinas="Tópicos em Arquitetura de Computadores" Requisito="-" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="10" Disciplinas="Matemática Discreta" Requisito="05PR" AT="4" AP="0" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="11" Disciplinas="Matemática para Computação" Requisito="05PR" AT="4" AP="0" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="12" Disciplinas="Filosofia" Requisito="-" AT="4" AP="0" Créd.="4" HA="80" HR="60" />
+  </periodo>
+  <periodo numero="3º" AT="14" AP="12" Créd.="26" HA="520" HR="390">
+    <disciplina Ordem="13" Disciplinas="Programação III" Requisito="07PR" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="14" Disciplinas="Banco de Dados" Requisito="-" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="15" Disciplinas="Tecnologia de Programação I" Requisito="02PR" AT="0" AP="4" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="16" Disciplinas="Algoritmos e Estruturas de Dados I" Requisito="01PR" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="17" Disciplinas="Engenharia de Processos e Requisitos I" Requisito="-" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="18" Disciplinas="Estatística" Requisito="11RE" AT="4" AP="0" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="19" Disciplinas="Ética" Requisito="" AT="2" AP="0" Créd.="2" HA="40" HR="30" />
+  </periodo>
+  <periodo numero="4º" AT="12" AP="14" Créd.="26" HA="520" HR="390">
+    <disciplina Ordem="20" Disciplinas="Programação IV" Requisito="13RE" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="21" Disciplinas="Administraçãode Banco de Dados" Requisito="14RE" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="22" Disciplinas="Tecnologia de Programação II" Requisito="15PR" AT="0" AP="4" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="23" Disciplinas="Algoritmos e Estrutura de Dados II" Requisito="16RE" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="24" Disciplinas="Engenharia de Processos e Requisitos II" Requisito="17PR" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="25" Disciplinas="Gestão do Conhecimento" Requisito="RP20%" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="26" Disciplinas="Cultura Religiosa" Requisito="-" AT="2" AP="0" Créd.="2" HA="40" HR="30" />
+  </periodo>
+  <periodo numero="5º" AT="14" AP="12" Créd.="26" HA="556" HR="426">
+    <disciplina Ordem="27" Disciplinas="Programação V" Requisito="20PR" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="28" Disciplinas="Sistemas Operacionais" Requisito="09RE,16RE" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="29" Disciplinas="Redes de Computadores I" Requisito="28CD" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="30" Disciplinas="Aspectos Teóricos de Computação" Requisito="04PR,10PR" AT="4" AP="0" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="31" Disciplinas="Análise e Projeto de Sistemas I" Requisito="24PR" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="32" Disciplinas="Tópicos em Engenharia de Software I" Requisito="17PR" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="33" Disciplinas="Projeto Integrador em Sistemas de Informação I" Requisito="27CD,31CD" AT="0" AP="2" Créd.="2" HA="40" HR="30" />
+    <disciplina Ordem="34" Disciplinas="Atividades Complementares" Requisito="" AT="0" AP="0" Créd.="0" HA="36" HR="36" />
+  </periodo>
+  <periodo numero="6º" AT="14" AP="12" Créd.="26" HA="556" HR="426">
+    <disciplina Ordem="35" Disciplinas="Programação VI" Requisito="27RE" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="36" Disciplinas="Gerência de Sistemas Operacionais" Requisito="28RE" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="37" Disciplinas="Redes de Computadores II" Requisito="29RE" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="38" Disciplinas="Gestão de Projetos e de Tecnologia da Informação" Requisito="32RE" AT="4" AP="0" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="39" Disciplinas="Análise e Projeto de Sistemas II" Requisito="31RE" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="40" Disciplinas="Tópicos em Engenharia de Software II" Requisito="32RE" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="41" Disciplinas="Projeto Integrador em Sistemas de Informação II" Requisito="35CD,39CD" AT="0" AP="2" Créd.="2" HA="40" HR="30" />
+    <disciplina Ordem="42" Disciplinas="Atividades Complementares" Requisito="-" AT="0" AP="0" Créd.="0" HA="36" HR="36" />
+  </periodo>
+  <periodo numero="7º" AT="10" AP="10" Créd.="24" HA="516" HR="396">
+    <disciplina Ordem="43" Disciplinas="Projeto Final em Sistemas de Informação I" Requisito="27PR,39PR, 21PR,38RE, PLP" AT="0" AP="6" Créd.="6" HA="120" HR="90" />
+    <disciplina Ordem="44" Disciplinas="Projeto Organizacional e Sistemas Corporativos" Requisito="32RE" AT="4" AP="0" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="45" Disciplinas="Interação Humano-Computador" Requisito="31RE" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="46" Disciplinas="Técnicas de Inteligência Artificial" Requisito="10PR,16PR" AT="2" AP="0" Créd.="2" HA="40" HR="30" />
+    <disciplina Ordem="47" Disciplinas="Economia e Administração" Requisito="RP50%" AT="2" AP="0" Créd.="2" HA="40" HR="30" />
+    <disciplina Ordem="48" Disciplinas="Eletiva" Requisito="-" AT="0" AP="0" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="49" Disciplinas="Projeto Comunitátrio" Requisito="RP720HS" AT="0" AP="2" Créd.="2" HA="40" HR="30" />
+    <disciplina Ordem="50" Disciplinas="Atividades Complementares" Requisito="-" AT="0" AP="0" Créd.="0" HA="36" HR="36" />
+  </periodo>
+  <periodo numero="8º" AT="8" AP="8" Créd.="22" HA="520" HR="366">
+    <disciplina Ordem="51" Disciplinas="Projeto Final em Sistemas de informação II" Requisito="43PR" AT="0" AP="6" Créd.="6" HA="120" HR="90" />
+    <disciplina Ordem="52" Disciplinas="Gestão de Tecnologia da Informação" Requisito="38RE" AT="4" AP="0" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="53" Disciplinas="Segurança e Auditoria de Sistemas" Requisito="28PR,37CD" AT="2" AP="2" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="54" Disciplinas="Empreendedorismo e Inovação em Computação" Requisito="RP50%" AT="2" AP="0" Créd.="2" HA="40" HR="30" />
+    <disciplina Ordem="55" Disciplinas="Eletiva" Requisito="-" AT="0" AP="0" Créd.="4" HA="80" HR="60" />
+    <disciplina Ordem="56" Disciplinas="Eletiva" Requisito="-" AT="0" AP="0" Créd.="2" HA="40" HR="30" />
+    <disciplina Ordem="57" Disciplinas="Atividades Complmentares" Requisito="-" AT="0" AP="0" Créd.="0" HA="36" HR="36" />
+  </periodo>
+</Curso>

@@ -23,6 +23,7 @@ namespace SistemaCursos
             string parametro2 = "MatrizCurricularBSI.xml";
             string parametro3 = "BSI";
             IOFiles.converteTXTparaXML(diretorio + parametro1, diretorio + parametro2, parametro3);
+            ImportadorXML.ImportaCurso(diretorio + parametro2);
         }
 
         static public void Teste()

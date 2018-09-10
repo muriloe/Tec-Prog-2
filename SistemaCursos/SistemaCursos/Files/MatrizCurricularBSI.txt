@@ -1,0 +1,95 @@
+1º Período
+Ordem	Disciplinas	Requisito	AT	AP	Créd.	HA	HR
+1	Programação I	-	2	4	6	120	90
+2	Laboratório de Informática	-	0	4	4	80	60
+3	Fundamentos de Sistemas de Informação	-	4	0	4	80	60
+4	Lógica Matemática	-	4	0	4	80	60
+5	Introdução ao Cálculo	-	4	0	4	80	60
+6	Leitura e Produção de Textos Acadêmicos            	-	4	0	4	80	60
+Total	 	18	8	26	520	390
+
+
+2º Período
+Ordem	Disciplinas	Requisito	AT	AP	Créd.	HA	HR
+7	Programação II	01PR	2	4	6	120	90
+8	Oficina de Programação	-	0	4	4	80	60
+9	Tópicos em Arquitetura de Computadores           	-	2	2	4	80	60
+10	Matemática Discreta	05PR	4	0	4	80	60
+11	Matemática para Computação	05PR	4	0	4	80	60
+12	Filosofia	-	4	0	4	80	60
+Total	 	16	10	26	520	390
+
+
+3º Período
+Ordem	Disciplinas	Requisito	AT	AP	Créd.	HA	HR
+13	Programação III	07PR	2	2	4	80	60
+14	Banco de Dados	-	2	2	4	80	60
+15	Tecnologia de Programação I	02PR	0	4	4	80	60
+16	Algoritmos e Estruturas de Dados I	01PR	2	2	4	80	60
+17	Engenharia de Processos e Requisitos I              	-	2	2	4	80	60
+18	Estatística	11RE	4	0	4	80	60
+19	Ética	 	2	0	2	40	30
+Total	 	14	12	26	520	390
+
+
+4º Período
+Ordem	Disciplinas	Requisito	AT	AP	Créd.	HA	HR
+20	Programação IV	13RE	2	2	4	80	60
+21	Administraçãode Banco de Dados	14RE	2	2	4	80	60
+22	Tecnologia de Programação II	15PR	0	4	4	80	60
+23	Algoritmos e Estrutura de Dados II	16RE	2	2	4	80	60
+24	Engenharia de Processos e Requisitos II             	17PR	2	2	4	80	60
+25	Gestão do Conhecimento	RP20%	2	2	4	80	60
+26	Cultura Religiosa	-	2	0	2	40	30
+Total	 	12	14	26	520	390
+
+
+5º Período
+Ordem	Disciplinas	Requisito	AT	AP	Créd.	HA	HR
+27	Programação V	20PR	2	2	4	80	60
+28	Sistemas Operacionais	09RE,16RE	2	2	4	80	60
+29	Redes de Computadores I	28CD	2	2	4	80	60
+30	Aspectos Teóricos de Computação	04PR,10PR	4	0	4	80	60
+31	Análise e Projeto de Sistemas I	24PR	2	2	4	80	60
+32	Tópicos em Engenharia de Software I       	17PR	2	2	4	80	60
+33	Projeto Integrador em Sistemas de Informação I 	27CD,31CD 	 0	2	2 	40 	30 
+34	Atividades Complementares	 	 0	0	0 	36 	36 
+Total	 	14	12	26	556	426
+
+
+6º Período
+Ordem	Disciplinas	Requisito	AT	AP	Créd.	HA	HR
+35	Programação VI	27RE	2	2	4	80	60
+36	Gerência de Sistemas Operacionais	28RE	2	2	4	80	60
+37	Redes de Computadores II	29RE	2	2	4	80	60
+38	Gestão de Projetos e de Tecnologia da Informação	32RE	4	0	4	80	60
+39	Análise e Projeto de Sistemas II	31RE	2	2	4	80	60
+40	Tópicos em Engenharia de Software II	32RE	2	2	4	80	60
+41	Projeto Integrador em Sistemas de Informação II	35CD,39CD	0	2	2	40	30
+42	Atividades Complementares	-	0	0	0	36	36
+Total	 	14	12	26	556	426
+
+
+7º Período
+Ordem	Disciplinas	Requisito	AT	AP	Créd.	HA	HR
+43	Projeto Final em Sistemas de Informação I	27PR,39PR, 21PR,38RE, PLP	0	6	6	120	90
+44	Projeto Organizacional e Sistemas Corporativos	32RE	4	0	4	80	60
+45	Interação Humano-Computador	31RE	2	2	4	80	60
+46	Técnicas de Inteligência Artificial	10PR,16PR	2	0	2	40	30
+47	Economia e Administração	RP50%	2	0	2	40	30
+48	Eletiva	-	0	0	4	80	60
+49	Projeto Comunitátrio	RP720HS	0	2	2	40	30
+50	Atividades Complementares	-	0	0	0	36	36
+Total	 	10	10	24	516	396
+
+
+8º Período
+Ordem	Disciplinas	Requisito	AT	AP	Créd.	HA	HR
+51	Projeto Final em Sistemas de informação II	43PR	0	6	6	120	90
+52	Gestão de Tecnologia da Informação	38RE	4	0	4	80	60
+53	Segurança e Auditoria de Sistemas	28PR,37CD	2	2	4	80	60
+54	Empreendedorismo e Inovação em Computação	RP50%	2	0	2	40	30
+55	Eletiva	-	0	0	4	80	60
+56	Eletiva	-	0	0	2	40	30
+57	Atividades Complmentares	- 	0 	 0	0 	36	36
+Total	 	8	8	22	520	366

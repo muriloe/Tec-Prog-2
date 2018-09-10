@@ -33,7 +33,7 @@ namespace SistemaCursos
                             string numPeriodo = reader.GetAttribute("numero");
                             numPeriodo = numPeriodo.Replace("º", "");
                             int numero = System.Convert.ToInt32(numPeriodo);
-                            novoPeriodo.CadastraPeriodo(numero);
+                            novoPeriodo.cadastraPeriodo(numero);
                             novoCurso.inserirPeriodo(novoPeriodo);
                         }
                         if (reader.Name == "disciplina")
