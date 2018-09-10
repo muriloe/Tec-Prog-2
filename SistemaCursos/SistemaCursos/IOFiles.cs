@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,7 +49,8 @@ namespace SistemaCursos
                 }
                 else if (valor.StartsWith("Ordem"))
                 {
-                    //Divide os elemento que contenha \t em uma lista
+                    //Divide os elemento que contenha \t em uma lista,
+                    //que será utilizada para instanciar o nó de disciplina
                     atributos = linha.Split('\t');
                 }
                 else if (valor.StartsWith("Total"))
@@ -62,15 +63,15 @@ namespace SistemaCursos
                     {
                         try
                         {
-                            //Insira aqui um comentário
+                            //Faz a conversão do valor selecionado
                             int numero = Convert.ToInt32(coluna.Trim());
-                            //Insira aqui um comentário
+                            //Insire o atributo/valor no nó período
                             elementoPeriodo.SetAttribute(atributos[indiceInicial].Trim(), numero.ToString());
                             indiceInicial++;
                         }
                         catch
                         {
-                            //Insira aqui um comentário
+                            //Caso ocorra erro na conversão
                         }
                     }
                 }
@@ -84,11 +85,11 @@ namespace SistemaCursos
                         //Sete um atributo de um elemento XML com um valor
                         elementoDisciplina.SetAttribute(atributos[i].Trim(), valores[i].Trim());
                     }
-                    //Insira aqui um comentário
+                    //Adiciona o nó de dispiclina
                     elementoPeriodo.AppendChild(elementoDisciplina);
                 }
             }
-            //Insira aqui um comentário
+            //Salva o documento xml
             documento.Save(arquivoXML);
             Console.WriteLine("Operação realizada com sucesso!");
             return true;
