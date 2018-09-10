@@ -1,4 +1,4 @@
-﻿using SistemaCursos.Interfaces;
+using SistemaCursos.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +29,7 @@ namespace SistemaCursos.Model
                 this.codigo = codigo;
                 this.nome = nome;
                 this.numeroAulasTeoricas = numAulaTeoricas;
-                this.numeroAulasPraticas = numeroAulasPraticas;
+                this.numeroAulasPraticas = numAulasPraticas;
                 this.numeroCreditos = numCredito;
                 this.totalHorasAulas = totalHorasAulas;
                 this.totalHorasRelogio = totalHorasRelogio;
