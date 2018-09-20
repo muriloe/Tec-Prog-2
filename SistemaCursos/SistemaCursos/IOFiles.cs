@@ -91,7 +91,6 @@ namespace SistemaCursos
             }
             //Salva o documento xml
             documento.Save(arquivoXML);
-            Console.WriteLine("Operação realizada com sucesso!");
             return true;
         }
     }
