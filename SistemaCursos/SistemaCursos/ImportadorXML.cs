@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
 
@@ -10,7 +11,7 @@ namespace SistemaCursos
 {
     class ImportadorXML
     {
-        public static void ImportaCurso(string arquivoXML)
+        public static Curso ImportaCurso(string arquivoXML)
         {
             Curso novoCurso = new Curso();
             Periodo novoPeriodo = new Periodo();
@@ -47,6 +48,23 @@ namespace SistemaCursos
                                                                                Convert.ToInt32(reader.GetAttribute("HA")),
                                                                                Convert.ToInt32(reader.GetAttribute("HR")));
 
+
+                            string disciplinas = reader.GetAttribute("Requisito");
+                            if (!(disciplinas.Contains("-")))
+                            {
+                                String[] disc = { disciplinas };
+                                if (disciplinas.Contains(","))
+                                {
+                                    disc = disciplinas.Split(',');
+                                }
+                                foreach (String d in disc)
+                                {
+                                    String preReq = Regex.Match(d, @"\d+").Value;
+                                    novaDisciplina.adicionarPreRequisito(preReq);
+                                }
+                            }
+
+
                             novoPeriodo.adicionaDisciplina(novaDisciplina);
                         }
                         break;
@@ -55,7 +73,7 @@ namespace SistemaCursos
                         break;
                 }
             }
-            Console.WriteLine(novoCurso);
+            return novoCurso;
         }
 
     }
