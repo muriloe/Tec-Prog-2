@@ -1,4 +1,4 @@
-﻿using SistemaCursos.Model;
+using SistemaCursos.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +9,13 @@ namespace SistemaCursos
 {
     class Program
     {
+        static Curso c1 = new Curso();
+
         static void Main(string[] args)
         {
             //Teste();
             Leitura();
+            ImprimirCurso(c1);
 
         }
 
@@ -23,7 +26,7 @@ namespace SistemaCursos
             string parametro2 = "MatrizCurricularBSI.xml";
             string parametro3 = "BSI";
             IOFiles.converteTXTparaXML(diretorio + parametro1, diretorio + parametro2, parametro3);
-            ImportadorXML.ImportaCurso(diretorio + parametro2);
+            c1 = ImportadorXML.ImportaCurso(diretorio + parametro2);
         }
 
         static public void Teste()
@@ -36,7 +39,7 @@ namespace SistemaCursos
 
             Disciplina disciplina3 = new Disciplina();
             disciplina3.cadastrarDisciplina(3, "Téc-Prog", 15, 30, 15, 200, 250);
-            disciplina3.adicionarPreRequisito(disciplina);
+            disciplina3.adicionarPreRequisito("1");
 
             Periodo p1 = new Periodo();
             p1.cadastraPeriodo(1);
@@ -51,6 +54,25 @@ namespace SistemaCursos
             bsi.cadastrarCurso("Bacharelado em Sistamas de Informação");
             bsi.inserirPeriodo(p1);
             bsi.inserirPeriodo(p2);
+        }
+
+        static public void ImprimirCurso(Curso c)
+        {
+            c.Imprimir();
+            List<Periodo> periodos = c.Periodos;
+
+            foreach (Periodo p in periodos)
+            {
+                p.Imprimir();
+                List<Disciplina> disciplinas = p.disciplinas;
+                Console.WriteLine("|Ordem\t|" + "Disciplina                             |" + "Requisitos             |" + "AT\t|" 
+                                  + "AP\t|" + "CRED\t|" + "HA \t|" + "HR|");
+                foreach (Disciplina d in disciplinas)
+                {
+                    d.Imprimir();
+                }
+                Console.WriteLine("\n\n");
+            }
         }
     }
 }
