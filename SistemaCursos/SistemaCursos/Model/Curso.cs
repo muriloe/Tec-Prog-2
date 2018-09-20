@@ -1,4 +1,4 @@
-﻿using SistemaCursos.Interfaces;
+using SistemaCursos.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,29 +9,29 @@ namespace SistemaCursos.Model
 {
     class Curso: IImpressao
     {
-        private string nome { get; set; }
-        private List<Periodo> periodos { get; set; }
+        public string Nome { get; set; }
+        public List<Periodo> Periodos { get; set; }
 
         public Curso()
         {
-            periodos = new List<Periodo>();
+            Periodos = new List<Periodo>();
         }
 
         public bool cadastrarCurso(string nome)
         {
-            this.nome = nome;
+            Nome = nome;
             return true;
         }
 
         public bool inserirPeriodo (Periodo periodo)
         {
-            this.periodos.Add(periodo);
+            Periodos.Add(periodo);
             return true;
         }
 
         public void Imprimir()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("\t\t\t Matriz – " + Nome );
         }
     }
 }
