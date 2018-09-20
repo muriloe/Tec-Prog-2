@@ -9,18 +9,55 @@ namespace SistemaCursos
 {
     class Program
     {
-        static Curso c1 = new Curso();
+        static Curso c1;
 
         static void Main(string[] args)
         {
+
+            //MainMenu();
+
             //Teste();
-            Leitura();
+            //Leitura();
             ImprimirCurso(c1);
+
+
+        }
+
+        static public void MainMenu()
+        {
+            Console.WriteLine("\n\n\n\n\n\n\n\n\n\n\n\n" +
+                              "1. LER XML\n" + 
+                              "2. IMPRIMIR CURSO\n" + 
+                              "Digite a opcao:");
+            string line = Console.ReadLine();
+            int selecao = 0;
+            try
+            {
+                selecao = Convert.ToInt16(line);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Valor digitado inválido");
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("Número muito grande");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Valor digitado inválido");
+            }
+            finally
+            {
+                MainMenu();
+            }
+            
 
         }
 
         static public void Leitura()
         {
+            c1 = null;
             string diretorio = @"C:\temp\";
             string parametro1 = "MatrizCurricularBSI.txt";
             string parametro2 = "MatrizCurricularBSI.xml";
@@ -58,18 +95,42 @@ namespace SistemaCursos
 
         static public void ImprimirCurso(Curso c)
         {
-            c.Imprimir();
+            try
+            {
+                c.Imprimir();
+            }
+            catch(NullReferenceException)
+            {
+                Console.WriteLine("Curso não instanciado");
+                MainMenu();
+            }
             List<Periodo> periodos = c.Periodos;
 
             foreach (Periodo p in periodos)
             {
-                p.Imprimir();
+                try
+                {
+                    p.Imprimir();
+                }
+                catch (NullReferenceException)
+                {
+                    Console.WriteLine("Periodo não instanciado");
+                }
+                
                 List<Disciplina> disciplinas = p.disciplinas;
                 Console.WriteLine("|Ordem\t|" + "Disciplina                             |" + "Requisitos             |" + "AT\t|" 
                                   + "AP\t|" + "CRED\t|" + "HA \t|" + "HR|");
                 foreach (Disciplina d in disciplinas)
                 {
-                    d.Imprimir();
+                    try
+                    {
+                        d.Imprimir();
+                    }
+                    catch (NullReferenceException)
+                    {
+                        Console.WriteLine("Materia nao instaciada");
+                    }
+                    
                 }
                 Console.WriteLine("\n\n");
             }
