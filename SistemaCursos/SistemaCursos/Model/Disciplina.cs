@@ -17,11 +17,11 @@ namespace SistemaCursos.Model
         private int numeroCreditos { get; set; }
         private int totalHorasAulas { get; set; }
         private int totalHorasRelogio { get; set; }
-        private List<Disciplina> preRequisitos { get; set; }
+        private List<String> preRequisitos { get; set; }
 
         public Disciplina()
         {
-            preRequisitos = new List<Disciplina>();
+            preRequisitos = new List<String>();
         }
 
         public bool cadastrarDisciplina(int codigo, string nome, int numAulaTeoricas, int numAulasPraticas, 
@@ -37,7 +37,7 @@ namespace SistemaCursos.Model
                 return true;
         }
 
-        public bool adicionarPreRequisito(Disciplina disciplina)
+        public bool adicionarPreRequisito(String disciplina)
         {
             this.preRequisitos.Add(disciplina);
             return true;
@@ -45,7 +45,40 @@ namespace SistemaCursos.Model
 
         public void Imprimir()
         {
-            throw new NotImplementedException();
+            string requisitos = "";
+            string requisitosLimitado = "";
+            string nomeLimitado = "";
+            foreach (String materia in preRequisitos)
+            {
+                requisitos = requisitos + " " + materia;
+            }
+            if (requisitos.Length > 24)
+            {
+                requisitosLimitado = requisitos.Substring(0, 23);
+            }
+            else
+            {
+                int tamanhoReq = requisitos.Length;
+                int espacosVazios = 23 - tamanhoReq;
+                requisitosLimitado = requisitos.PadRight(23);
+
+            }
+
+
+            if (nome.Length > 40)
+            {
+                nomeLimitado = nome.Substring(0, 39);
+            }
+            else
+            {
+                int tamanhoNome = nome.Length;
+                int espacosVazios = 39 - tamanhoNome;
+                nomeLimitado = nome.PadRight(39);
+
+            }
+            Console.WriteLine("|"+codigo + "\t|" + nomeLimitado + "|" + requisitosLimitado + "|" + numeroAulasTeoricas 
+                                + "\t|" + numeroAulasPraticas + "\t|" + numeroCreditos + "\t|" +
+                                totalHorasAulas + "\t|" + totalHorasRelogio + "|");
         }
     }
 }
