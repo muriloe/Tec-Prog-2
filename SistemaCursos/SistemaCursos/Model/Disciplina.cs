@@ -10,19 +10,20 @@ namespace SistemaCursos.Model
     class Disciplina: IImpressao
     {
         
-        private int codigo { get; set; }
-        private string nome { get; set; } 
-        private int numeroAulasTeoricas { get; set; }
-        private int numeroAulasPraticas { get; set; }
-        private int numeroCreditos { get; set; }
-        private int totalHorasAulas { get; set; }
-        private int totalHorasRelogio { get; set; }
-        private List<String> preRequisitos { get; set; }
+        public int codigo { get; set; }
+        public string nome { get; set; }
+        public int numeroAulasTeoricas { get; set; }
+        public int numeroAulasPraticas { get; set; }
+        public int numeroCreditos { get; set; }
+        public int totalHorasAulas { get; set; }
+        public int totalHorasRelogio { get; set; }
+        public List<String> preRequisitos { get; set; }
 
         public Disciplina()
         {
             preRequisitos = new List<String>();
         }
+
 
         public bool cadastrarDisciplina(int codigo, string nome, int numAulaTeoricas, int numAulasPraticas, 
                                         int numCredito, int totalHorasAulas, int totalHorasRelogio){
