@@ -17,7 +17,7 @@ namespace SistemaCursos
             //MainMenu();
 
             //Teste();
-            //Leitura();
+            Leitura();
             ImprimirCurso(c1);
 
 
@@ -95,6 +95,7 @@ namespace SistemaCursos
 
         static public void ImprimirCurso(Curso c)
         {
+            string linhaSoma;
             try
             {
                 c.Imprimir();
@@ -132,8 +133,46 @@ namespace SistemaCursos
                     }
                     
                 }
+                linhaSoma = "TOTAL\t\t AT:" + SomarHorasPeriodo("AT", p);
+                linhaSoma += "\t AP:" + SomarHorasPeriodo("AP", p);
+                linhaSoma += "\t CRED:" + SomarHorasPeriodo("CRED", p);
+                linhaSoma += "\t HA:" + SomarHorasPeriodo("HA", p);
+                linhaSoma += "\t HR:" + SomarHorasPeriodo("HR", p);
+                Console.WriteLine(linhaSoma);
                 Console.WriteLine("\n\n");
             }
+        }
+
+        static int SomarHorasPeriodo(string atributo, Periodo periodo)
+        {
+            List<Disciplina> displinas = periodo.disciplinas;
+            int soma = 0;
+            foreach (Disciplina d in displinas)
+            {
+                if(atributo == "AT")
+                {
+                    soma += d.numeroAulasTeoricas; 
+                }
+                else if(atributo == "AP")
+                {
+                    soma += d.numeroAulasPraticas;
+                }
+                else if(atributo == "CRED")
+                {
+                    soma += d.numeroCreditos;
+                }
+                else if(atributo == "HA")
+                {
+                    soma += d.totalHorasAulas;
+                }
+                else if(atributo == "HR")
+                {
+                    soma += d.totalHorasRelogio;
+                }
+            }
+
+
+            return soma;
         }
     }
 }
