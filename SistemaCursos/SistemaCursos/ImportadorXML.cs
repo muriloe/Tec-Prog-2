@@ -23,7 +23,7 @@ namespace SistemaCursos
             {
                 switch (reader.NodeType)
                 {
-                    case XmlNodeType.Element: // The node is an element.
+                    case XmlNodeType.Element: 
                         if (reader.Name == "Curso")
                         {
                             novoCurso.cadastrarCurso(reader.GetAttribute("nome"));
@@ -69,7 +69,7 @@ namespace SistemaCursos
                         }
                         break;
 
-                    case XmlNodeType.EndElement: //Display the end of the element.
+                    case XmlNodeType.EndElement: 
                         break;
                 }
             }
