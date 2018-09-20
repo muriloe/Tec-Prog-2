@@ -1,4 +1,4 @@
-﻿using SistemaCursos.Interfaces;
+using SistemaCursos.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +9,8 @@ namespace SistemaCursos.Model
 {
     class Periodo: IImpressao
     {
-        private int numeroIdentificacao { get; set; }
-        private List<Disciplina> disciplinas { get; set; }
+        public int numeroIdentificacao { get; set; }
+        public List<Disciplina> disciplinas { get; set; }
 
         public Periodo()
         {
@@ -31,7 +31,12 @@ namespace SistemaCursos.Model
 
         public void Imprimir()
         {
-            throw new NotImplementedException();
+            Console.WriteLine(numeroIdentificacao + "° Período");
+        }
+
+        public List<Disciplina> getDisciplinas()
+        {
+            return disciplinas;
         }
     }
 }
