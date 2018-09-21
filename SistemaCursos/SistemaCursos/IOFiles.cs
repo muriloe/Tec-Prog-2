@@ -18,7 +18,7 @@ namespace SistemaCursos
             if (!File.Exists(arquivoTxt))
             {
                 //Caso não exista mostra o erro
-                Console.WriteLine("Erro: " + "especifique aqui o erro");
+                Console.WriteLine("Erro: " + "arquivo não encontrado");
                 return false;
             }
             //Realiza a leitura do arquivo

@@ -11,6 +11,18 @@ namespace SistemaCursos.Model
     {
         public int numeroIdentificacao { get; set; }
         public List<Disciplina> disciplinas { get; set; }
+        private static int _AT;
+
+        public int AT
+        {
+            get { return _AT; }
+            set { _AT = value; }
+        }
+
+        public int AP { get; set; }
+        public int CRED { get; set; }
+        public int HA { get; set; }
+        public int HR { get; set; }
 
         public Periodo()
         {

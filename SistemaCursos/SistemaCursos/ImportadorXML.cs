@@ -19,60 +19,68 @@ namespace SistemaCursos
 
 
             XmlTextReader reader = new XmlTextReader(arquivoXML);
-            while (reader.Read())
+            try
             {
-                switch (reader.NodeType)
+                while (reader.Read())
                 {
-                    case XmlNodeType.Element: 
-                        if (reader.Name == "Curso")
-                        {
-                            novoCurso.cadastrarCurso(reader.GetAttribute("nome"));
-                        }
-                        if (reader.Name == "periodo")
-                        {
-                            novoPeriodo = new Periodo();   
-                            string numPeriodo = reader.GetAttribute("numero");
-                            numPeriodo = numPeriodo.Replace("º", "");
-                            int numero = System.Convert.ToInt32(numPeriodo);
-                            novoPeriodo.cadastraPeriodo(numero);
-                            novoCurso.inserirPeriodo(novoPeriodo);
-                        }
-                        if (reader.Name == "disciplina")
-                        {
-                            novaDisciplina = new Disciplina();
-                            novaDisciplina.cadastrarDisciplina(Convert.ToInt32(reader.GetAttribute("Ordem")),
-                                                                               reader.GetAttribute("Disciplinas"),
-                                                                               Convert.ToInt32(reader.GetAttribute("AT")),
-                                                                               Convert.ToInt32(reader.GetAttribute("AP")),
-                                                                               Convert.ToInt32(reader.GetAttribute("Créd.")),
-                                                                               Convert.ToInt32(reader.GetAttribute("HA")),
-                                                                               Convert.ToInt32(reader.GetAttribute("HR")));
-
-
-                            string disciplinas = reader.GetAttribute("Requisito");
-                            if (!(disciplinas.Contains("-")))
+                    switch (reader.NodeType)
+                    {
+                        case XmlNodeType.Element:
+                            if (reader.Name == "Curso")
                             {
-                                String[] disc = { disciplinas };
-                                if (disciplinas.Contains(","))
-                                {
-                                    disc = disciplinas.Split(',');
-                                }
-                                foreach (String d in disc)
-                                {
-                                    String preReq = Regex.Match(d, @"\d+").Value;
-                                    novaDisciplina.adicionarPreRequisito(preReq);
-                                }
+                                novoCurso.cadastrarCurso(reader.GetAttribute("nome"));
                             }
+                            if (reader.Name == "periodo")
+                            {
+                                novoPeriodo = new Periodo();
+                                string numPeriodo = reader.GetAttribute("numero");
+                                numPeriodo = numPeriodo.Replace("º", "");
+                                int numero = System.Convert.ToInt32(numPeriodo);
+                                novoPeriodo.cadastraPeriodo(numero);
+                                novoCurso.inserirPeriodo(novoPeriodo);
+                            }
+                            if (reader.Name == "disciplina")
+                            {
+                                novaDisciplina = new Disciplina();
+                                novaDisciplina.cadastrarDisciplina(Convert.ToInt32(reader.GetAttribute("Ordem")),
+                                                                                   reader.GetAttribute("Disciplinas"),
+                                                                                   Convert.ToInt32(reader.GetAttribute("AT")),
+                                                                                   Convert.ToInt32(reader.GetAttribute("AP")),
+                                                                                   Convert.ToInt32(reader.GetAttribute("Créd.")),
+                                                                                   Convert.ToInt32(reader.GetAttribute("HA")),
+                                                                                   Convert.ToInt32(reader.GetAttribute("HR")));
 
 
-                            novoPeriodo.adicionaDisciplina(novaDisciplina);
-                        }
-                        break;
+                                string disciplinas = reader.GetAttribute("Requisito");
+                                if (!(disciplinas.Contains("-")))
+                                {
+                                    String[] disc = { disciplinas };
+                                    if (disciplinas.Contains(","))
+                                    {
+                                        disc = disciplinas.Split(',');
+                                    }
+                                    foreach (String d in disc)
+                                    {
+                                        String preReq = Regex.Match(d, @"\d+").Value;
+                                        novaDisciplina.adicionarPreRequisito(preReq);
+                                    }
+                                }
 
-                    case XmlNodeType.EndElement: 
-                        break;
+
+                                novoPeriodo.adicionaDisciplina(novaDisciplina);
+                            }
+                            break;
+
+                        case XmlNodeType.EndElement:
+                            break;
+                    }
                 }
             }
+            catch
+            {
+                Console.WriteLine("ARQUIVO XML COM PROBLEMA, VERIFIQUE");
+            }
+
             return novoCurso;
         }
 

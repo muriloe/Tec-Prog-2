@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace SistemaCursos.Model
 {
+    delegate void HRModificadoEventHandler(Disciplina d, int horarioAntigo, int horarioNovo);
+
     class Disciplina: IImpressao
     {
         
@@ -16,8 +18,26 @@ namespace SistemaCursos.Model
         public int numeroAulasPraticas { get; set; }
         public int numeroCreditos { get; set; }
         public int totalHorasAulas { get; set; }
-        public int totalHorasRelogio { get; set; }
+      
+        private int _totalHorasRelogio;
+        public int totalHorasRelogio
+        {
+            get
+            {
+                return _totalHorasRelogio;
+            }
+            set
+            {
+                if (alteracaoHRFinalizado != null)
+                {
+                    int novaHR = value;
+                    _totalHorasRelogio = novaHR;
+                    alteracaoHRFinalizado(this, totalHorasRelogio, novaHR);
+                }
+            }
+        }
         public List<String> preRequisitos { get; set; }
+        public event HRModificadoEventHandler alteracaoHRFinalizado;
 
         public Disciplina()
         {
