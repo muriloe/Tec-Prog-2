@@ -15,13 +15,13 @@ namespace SistemaCursos
         {
 
             //MainMenu();
-
             //Teste();
             Leitura();
             c1.Imprimir();
-
+            AlterarDisciplina();
 
         }
+
 
         static public void MainMenu()
         {
@@ -50,6 +50,21 @@ namespace SistemaCursos
             finally
             {
                 MainMenu();
+            }
+            
+
+        }
+
+        static private void AlterarDisciplina()
+        {
+            try
+            {
+                c1.Periodos[0].disciplinas[0].alteracaoHRFinalizado += c1.HRChange;
+                c1.Periodos[0].disciplinas[0].totalHorasRelogio = 39;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Referencia de objeto inválida");
             }
             
 
