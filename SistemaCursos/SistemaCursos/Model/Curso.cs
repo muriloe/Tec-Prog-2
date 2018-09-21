@@ -10,24 +10,18 @@ namespace SistemaCursos.Model
     class Curso: IImpressao
     {
         public static string Nome { get; set; }
-
         private static List<Periodo> _Periodos;
-
         public List<Periodo> Periodos
         {
             get { return _Periodos; }
             set { _Periodos = value; }
         }
-
-
         private static int _AT;
-
         public static int AT
         {
             get { return _AT; }
             set { _AT = value; }
         }
-
         private static int AP { get; set; }
         private static int CRED { get; set; }
         private static int HA { get; set; }
@@ -36,6 +30,11 @@ namespace SistemaCursos.Model
         public Curso()
         {
             Periodos = new List<Periodo>();
+        }
+
+        public void HRChange(Disciplina d, int horarioAntigo, int horarioNovo)
+        {
+            Console.WriteLine("A disciplina " + d.nome +  " teve sua carga horária modificada de "+ horarioAntigo + " para " + horarioNovo);
         }
 
         public bool cadastrarCurso(string nome)
@@ -105,7 +104,7 @@ namespace SistemaCursos.Model
                 Console.WriteLine("\n\n");
             }
             somarPeriodos();
-            Console.WriteLine(HA + HR + CRED + AT + AP);
+            Console.WriteLine(Nome + " - TOTAL: \t\t HA: " + HA +"\tHR: " + HR + "\tCRED:" + CRED + "\tAT: " + AT +"\tAP:" + AP);
         }
 
         static void somarPeriodos()
