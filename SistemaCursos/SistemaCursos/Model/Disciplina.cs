@@ -30,14 +30,22 @@ namespace SistemaCursos.Model
             {
                 if (alteracaoHRFinalizado != null)
                 {
+                    int horaAntiga = _totalHorasRelogio;
                     int novaHR = value;
                     _totalHorasRelogio = novaHR;
-                    alteracaoHRFinalizado(this, totalHorasRelogio, novaHR);
+                    alteracaoHRFinalizado(this, horaAntiga, novaHR);
+                }
+                else
+                {
+                    _totalHorasRelogio = value;
                 }
             }
         }
         public List<String> preRequisitos { get; set; }
         public event HRModificadoEventHandler alteracaoHRFinalizado;
+
+
+
 
         public Disciplina()
         {
